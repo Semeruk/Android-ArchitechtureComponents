@@ -1,4 +1,4 @@
-package com.semeruk.android_architechturecomponents;
+package com.semeruk.architechturecomponents;
 
 import org.junit.Test;
 

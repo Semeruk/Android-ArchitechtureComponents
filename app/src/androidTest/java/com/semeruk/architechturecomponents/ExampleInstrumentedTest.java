@@ -1,4 +1,4 @@
-package com.semeruk.android_architechturecomponents;
+package com.semeruk.architechturecomponents;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

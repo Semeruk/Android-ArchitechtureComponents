@@ -1,4 +1,4 @@
-package com.semeruk.android_architechturecomponents;
+package com.semeruk.architechturecomponents;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
