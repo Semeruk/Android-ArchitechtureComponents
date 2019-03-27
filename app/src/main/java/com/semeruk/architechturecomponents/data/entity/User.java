@@ -1,4 +1,4 @@
-package com.semeruk.architechturecomponents.model;
+package com.semeruk.architechturecomponents.data.entity;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
