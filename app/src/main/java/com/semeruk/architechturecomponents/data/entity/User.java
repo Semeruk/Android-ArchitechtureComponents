@@ -9,6 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
+/**
+ * User object will be used both by Retrofit and Room
+ */
 @Entity
 public class User {
 
