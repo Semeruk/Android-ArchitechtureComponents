@@ -1,4 +1,4 @@
-package com.semeruk.architechturecomponents.di.model;
+package com.semeruk.architechturecomponents.di.module;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;

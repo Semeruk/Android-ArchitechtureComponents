@@ -1,4 +1,4 @@
-package com.semeruk.architechturecomponents.di.model;
+package com.semeruk.architechturecomponents.di.module;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
