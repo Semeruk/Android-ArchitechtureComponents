@@ -1,6 +1,6 @@
 package com.semeruk.architechturecomponents.di.module;
 
-import com.semeruk.architechturecomponents.MainActivity;
+import com.semeruk.architechturecomponents.ui.MainActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

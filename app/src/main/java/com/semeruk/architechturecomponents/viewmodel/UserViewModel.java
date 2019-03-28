@@ -32,7 +32,7 @@ public class UserViewModel extends ViewModel {
         mUserLiveData = mUserRepository.getUser(userId);
     }
 
-    public LiveData<User> getmUserLiveData() {
+    public LiveData<User> getUserLiveData() {
         return mUserLiveData;
     }
 }

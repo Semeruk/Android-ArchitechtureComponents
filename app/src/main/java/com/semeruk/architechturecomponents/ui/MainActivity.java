@@ -1,7 +1,9 @@
-package com.semeruk.architechturecomponents;
+package com.semeruk.architechturecomponents.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.semeruk.architechturecomponents.R;
 
 public class MainActivity extends AppCompatActivity {
 
