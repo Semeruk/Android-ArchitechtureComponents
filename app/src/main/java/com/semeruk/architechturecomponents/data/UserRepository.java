@@ -42,19 +42,23 @@ public class UserRepository {
     private void refreshUser(String userLogin) {
         executor.execute(() -> {
 
-            // Check if user was fetched recently
+            // Check if the user was fetched recently
             boolean userExists = (userDao.hasUser(userLogin, getMaxRefreshTime()) != null);
 
             // If the user has to be updated
             if (!userExists) {
+
                 apiService.getUser(userLogin).enqueue(new Callback<User>() {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
+
                         Toast.makeText(CustomApplication.getContext, "Data refreshed from the network!", Toast.LENGTH_LONG).show();
                         executor.execute(() -> {
+
                             User user = response.body();
                             user.setLastRefresh(new Date());
                             userDao.save(user);
+
                         });
                     }
 

@@ -8,6 +8,9 @@ import java.util.Map;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
+/**
+ * Factory for the ViewModel that will handle the injection of dependency more “cleaner”.
+ */
 public class FactoryViewModel implements ViewModelProvider.Factory {
 
     private final Map<Class<? extends ViewModel>, Provider<ViewModel>> creators;
