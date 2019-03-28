@@ -10,5 +10,4 @@ Includes: Dagger 2, ButterKnife, Glide, Gson
 https://developer.android.com/topic/libraries/architecture/guide.html
 
 # Author of the explanation
-PhilippeBoisney
 https://proandroiddev.com/the-missing-google-sample-of-android-architecture-components-guide-c7d6e7306b8f
