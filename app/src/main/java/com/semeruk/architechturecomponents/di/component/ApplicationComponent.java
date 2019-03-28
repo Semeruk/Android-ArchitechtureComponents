@@ -11,11 +11,10 @@ import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
+import dagger.android.support.AndroidSupportInjectionModule;
 
 @Singleton
-@Component( modules = {
-        ActivityModule.class, FragmentModule.class, ApplicationModule.class
-})
+@Component(modules={AndroidSupportInjectionModule.class, ActivityModule.class, FragmentModule.class, ApplicationModule.class})
 public interface ApplicationComponent {
 
     @Component.Builder
@@ -25,5 +24,5 @@ public interface ApplicationComponent {
         ApplicationComponent build();
     }
 
-    void inject(CustomApplication customApplication);
+    void inject(CustomApplication application);
 }

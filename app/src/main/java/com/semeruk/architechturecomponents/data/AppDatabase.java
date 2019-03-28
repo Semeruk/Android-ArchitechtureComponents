@@ -8,7 +8,7 @@ import com.semeruk.architechturecomponents.data.dao.UserDao;
 import com.semeruk.architechturecomponents.data.entity.User;
 import com.semeruk.architechturecomponents.data.util.DateConverter;
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class}, version = 1, exportSchema = false)
 @TypeConverters(DateConverter.class)
 public abstract class AppDatabase extends RoomDatabase {
 

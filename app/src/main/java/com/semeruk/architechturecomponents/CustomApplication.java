@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 
+import com.semeruk.architechturecomponents.di.component.DaggerApplicationComponent;
+
 import javax.inject.Inject;
 
 import dagger.android.DispatchingAndroidInjector;
