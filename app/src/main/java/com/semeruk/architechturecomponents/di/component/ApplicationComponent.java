@@ -2,6 +2,7 @@ package com.semeruk.architechturecomponents.di.component;
 
 import android.app.Application;
 
+import com.semeruk.architechturecomponents.CustomApplication;
 import com.semeruk.architechturecomponents.di.module.ActivityModule;
 import com.semeruk.architechturecomponents.di.module.ApplicationModule;
 import com.semeruk.architechturecomponents.di.module.FragmentModule;

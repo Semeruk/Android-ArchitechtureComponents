@@ -3,6 +3,7 @@ package com.semeruk.architechturecomponents.data;
 import android.arch.lifecycle.LiveData;
 import android.widget.Toast;
 
+import com.semeruk.architechturecomponents.CustomApplication;
 import com.semeruk.architechturecomponents.api.github.rest.ApiService;
 import com.semeruk.architechturecomponents.data.dao.UserDao;
 import com.semeruk.architechturecomponents.data.entity.User;
@@ -52,7 +53,7 @@ public class UserRepository {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
 
-                        Toast.makeText(CustomApplication.getContext, "Data refreshed from the network!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(CustomApplication.getContext(), "Data refreshed from the network!", Toast.LENGTH_LONG).show();
                         executor.execute(() -> {
 
                             User user = response.body();
