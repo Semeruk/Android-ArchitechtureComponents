@@ -16,22 +16,24 @@ import dagger.android.support.HasSupportFragmentInjector;
 public class MainActivity extends AppCompatActivity implements HasSupportFragmentInjector {
 
     @Inject
-    DispatchingAndroidInjector<Fragment> dispatchingAndroidInjector;
+    DispatchingAndroidInjector<Fragment> fragmentInjector;
 
     private static String USER_LOGIN = "JakeWharton";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Configure Dagger before calling super.onCreate();
+        AndroidInjection.inject(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.configureDagger();
-        this.showFragment(savedInstanceState);
+        showFragment(savedInstanceState);
     }
 
     @Override
     public DispatchingAndroidInjector<Fragment> supportFragmentInjector() {
-        return dispatchingAndroidInjector;
+        return fragmentInjector;
     }
 
     private void showFragment(Bundle savedInstanceState){
@@ -47,9 +49,5 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
                     .add(R.id.fragment_container, fragment, null)
                     .commit();
         }
-    }
-
-    private void configureDagger(){
-        AndroidInjection.inject(this);
     }
 }

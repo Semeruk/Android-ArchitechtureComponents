@@ -67,19 +67,10 @@ public class UserProfileFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        this.configureDagger();
-        this.configureViewModel();
-    }
-
-    /**
-     * Configurations
-     */
-
-    private void configureDagger() {
+        // Configure Dagger
         AndroidSupportInjection.inject(this);
-    }
 
-    private void configureViewModel() {
+        // Configure ViewModel
         String userLogin = getArguments().getString(UID_KEY);
         mViewModel = ViewModelProviders.of(this, viewModelFactory).get(UserViewModel.class);
         mViewModel.init(userLogin);

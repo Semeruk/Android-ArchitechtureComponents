@@ -16,26 +16,24 @@ public class CustomApplication extends Application implements HasActivityInjecto
     @Inject
     DispatchingAndroidInjector<Activity> dispatchingAndroidInjector;
 
-    public static Context context;
+    private static Context mContext;
 
     public static Context getContext() {
-        return context;
+        return mContext;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        this.initDagger();
-        context = getApplicationContext();
+        // Init Dagger
+        DaggerApplicationComponent.builder().application(this).build().inject(this);
+
+        mContext = getApplicationContext();
     }
 
     @Override
     public DispatchingAndroidInjector<Activity> activityInjector() {
         return dispatchingAndroidInjector;
-    }
-
-    private void initDagger() {
-        DaggerApplicationComponent.builder().application(this).build().inject(this);
     }
 }
